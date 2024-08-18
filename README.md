@@ -177,6 +177,7 @@ The data is processed using Google's Generative AI to extract relevant keywords,
 2. **Install Dependencies**:
    ```bash
    npm install
+   npm install axios @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
    ```
 
 3. **Start the React Application**:
