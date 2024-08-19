@@ -41,21 +41,34 @@ def get_data():
     address_names = []
 
     
-    for kw in keywords:
-        for item in res:
-            food_item = item.get("FoodItems")
+    # for kw in keywords:
+    #     for item in res:
+    #         food_item = item.get("FoodItems")
 
-            if isinstance(food_item, str) and food_item.find(kw):
-                applicant_name = item.get("Applicant")
-                address_name = item.get("Address")
-                # print(address_name, type(address_name))
-                if isinstance(food_item, str) and kw.lower() in food_item.lower():
-                    food_items.append(food_item)
-                if isinstance(applicant_name, str) and kw.lower() in applicant_name.lower():
-                    applicant_names.append(applicant_name)
-                if isinstance(address_name, str):
-                    address_names.append(address_name)
-            
+    #         if isinstance(food_item, str) and food_item.find(kw):
+    #             applicant_name = item.get("Applicant")
+    #             address_name = item.get("Address")
+    #             # print(address_name, type(address_name))
+    #             if isinstance(food_item, str) and kw.lower() in food_item.lower():
+    #                 food_items.append(food_item)
+    #             if isinstance(applicant_name, str) and kw.lower() in applicant_name.lower():
+    #                 applicant_names.append(applicant_name)
+    #             if isinstance(address_name, str):
+    #                 address_names.append(address_name)
+    for kw in keywords:
+     for item in res:
+        food_item = item.get("FoodItems")
+        applicant_name = item.get("Applicant")
+        address_name = item.get("Address")
+
+        if isinstance(food_item, str) and kw.lower() in food_item.lower():
+            # Keyword found in the food item
+            food_items.append(food_item)
+            if isinstance(applicant_name, str):
+                applicant_names.append(applicant_name)
+            if isinstance(address_name, str):
+                address_names.append(address_name)
+     
 
     
     result = {

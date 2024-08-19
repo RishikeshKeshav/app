@@ -78,7 +78,7 @@ input[type="text"] {
   padding: 0;
 }
 
-.food-items li, .applicant-names li {
+.food-items li, .applicant-names li, .address-names li{
   background-color: #e9ecef;
   margin: 5px 0;
   padding: 10px;
