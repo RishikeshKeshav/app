@@ -2,3 +2,5 @@ Flask
 pandas
 flask-cors
 google-generativeai
+python-dotenv
+
